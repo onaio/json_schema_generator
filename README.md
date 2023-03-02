@@ -70,7 +70,7 @@ print(main([{"test": "entry"}, [1984]]))
 ## Test
 
 ```bash
-pytest
+python -m pytest
 ```
 
 Powered by [Genson](https://github.com/wolverdude/GenSON)
