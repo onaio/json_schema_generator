@@ -15,11 +15,21 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-## Install Dependencies
+## Install
 
-```bash
-pip install '.[tests]'
-```
+1.  Locally
+
+    ```bash
+    git clone git@github.com:onaio/json_schema_generator.git && cd json_schema_generator
+
+    pip install '.[tests]'
+    ```
+
+2.  From Github
+
+    ```bash
+    pip install json_schema_generator https://github.com/onaio/json_schema_generator/archive/main.zip
+    ```
 
 ## Help
 
@@ -28,6 +38,8 @@ json_schema_generator -h
 ```
 
 ## Run
+
+### As a CLI
 
 1. Output to Terminal
 
@@ -40,6 +52,20 @@ json_schema_generator -h
    ```bash
    json_schema_generator --source sample_files/sample.json > sample_files/schema.json
    ```
+
+### As a Module
+
+```python
+from json_schema_generator import JsonType, generate_schema
+
+
+def main(record: JsonType):
+    return generate_schema(record)
+
+
+print(main([{"test": "entry"}, [1984]]))
+
+```
 
 ## Test
 
