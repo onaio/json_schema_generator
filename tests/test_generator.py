@@ -63,9 +63,9 @@ def test_success():
     command = [
         "json_schema_generator",
         "--source",
-        "sample-files/sample.json",
+        "sample_files/sample.json",
     ]
     out, err, exitcode = capture(command)
     assert exitcode == 0
     assert err == b""
-    assert json.loads(out) == json.load(open("sample-files/schema.json"))
+    assert json.loads(out) == json.load(open("sample_files/schema.json"))
