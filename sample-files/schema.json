@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "age": { "type": "integer" },
+    "Born At": { "type": "string" },
+    "Birthdate": { "type": "string" },
+    "photo": { "type": "string" },
+    "wife": { "type": ["null", "string"] },
+    "weight": { "type": "number" },
+    "hasChildren": { "type": "boolean" },
+    "hasGreyHair": { "type": "boolean" },
+    "children": { "type": "array", "items": { "type": "string" } }
+  }
+}
